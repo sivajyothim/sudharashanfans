@@ -1,0 +1,59 @@
+User Module API's List : 
+
+Title  : User Signup
+URL    : http://localhost/catering-services/api/signup
+Params : {"username":"Jyothi","useremail":"jyothi@gmail.com","usermobile":"8688941773","userpassword":"123123","app":"web"}
+
+Title  : Account verification
+URL    : http://localhost/catering-services/api/accountverification
+Params : {"verificationcode":"115792"}
+
+Title  : User Login
+URL    :  http://localhost/catering-services/api/login
+Params :  {"loginusername":"8688941771","loginpassword":"123123","app":"web"}
+
+Title  : Forgot Password 
+URL    : http://localhost/catering-services/api/forgotpassword
+Params : {"username":"8688941771"}
+
+Title  : Reset password 
+URL    : http://localhost/catering-services/api/resetpassword
+Params : {"verificationcode":"136993","password":"123123"}
+
+Title  : Change Password 
+URL    : http://localhost/catering-services/api/updatepassword
+Params : {"userid":"bb270d20750880589fbc9966358c97037551db25","current_password":"achari","old_password":"123123"}
+
+Title  : profile Details 
+URL    :  http://localhost/catering-services/api/profiledetails
+Params :  {"userid":"bb270d20750880589fbc9966358c97037551db25"}
+
+Title  :  Update Profile 
+URL    : http://localhost/catering-services/api/profiledetails
+Params : {"userid":"bb270d20750880589fbc9966358c97037551db25","username":"Venkateswara achari","address":"plot no:20,My Home hub","landmark":"Diamond House","area":"Gayathri Hills","city":"Hyderabad","state":"Telangana","country":"India","pincode":"50081"}
+
+Title  : Create New address 
+URL    : http://localhost/catering-services/api/createaddress
+Method : POST
+Params : {"userid":"bb270d20750880589fbc9966358c97037551db25","username":"Venkateswara achari","mobile":"8688941771","address":"plot no:20,My Home hub","landmark":"Diamond House","area":"Gayathri Hills","city":"Hyderabad","state":"Telangana","country":"India","pincode":"500081"}
+
+Title  :  User address List
+URL    :  http://localhost/catering-services/api/addresslist
+Method :  POST
+Params :  {"userid":"bb270d20750880589fbc9966358c97037551db25"}
+
+Title  :  User address Details
+URL    :  http://localhost/catering-services/api/addressdetails
+Method :  POST
+Params :  {"userid":"bb270d20750880589fbc9966358c97037551db25","addressid":"b2ff4c2629b71b0062ca0d33ea8e6c6cbf5f2812"}
+
+Title  :  Update User address Details
+URL    :  http://localhost/catering-services/api/updateaddress
+Method :  POST
+Params :  {"userid":"bb270d20750880589fbc9966358c97037551db25","addressid":"b2ff4c2629b71b0062ca0d33ea8e6c6cbf5f2812","username":"achari","mobile":"8688941773","address":"plot no:20,My Home hub","landmark":"Diamond House","area":"Gayathri Hills","city":"Hyderabad","state":"Telangana","country":"India","pincode":"500081"}
+
+Title  :  Delete User Address
+URL    :  http://localhost/catering-services/api/deleteaddress
+Method :  POST
+Params :  {"userid":"bb270d20750880589fbc9966358c97037551db25","addressid":"b2ff4c2629b71b0062ca0d33ea8e6c6cbf5f2812"}
+

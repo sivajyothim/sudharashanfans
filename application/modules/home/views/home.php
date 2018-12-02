@@ -304,7 +304,7 @@
                                     <div class="card">
                                         <div class="card-block block-4">
                                             <h3 class="card-title">MER Technology</h3>
-                                            <p class="card-text">All sudharshan fans runs with the Mango-Electric Rotor Technology which gives the high efficiency.</p>
+                                            <p class="card-text">All sudharshan fans runs with the Magno-Electric Rotor Technology which gives the high efficiency.</p>
                                         </div>
                                     </div>
                                 </div>

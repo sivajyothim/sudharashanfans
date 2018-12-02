@@ -88,7 +88,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url','file','project','projectaccess','form');
+$autoload['helper'] = array('url','file','project','projectaccess','form','sendsms_helper');
 
 /*
 | -------------------------------------------------------------------

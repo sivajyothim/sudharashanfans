@@ -254,8 +254,6 @@ echo $res;
 }
 public function sendsms()
 {
-
-$this->load->helper('sendsms_helper');
 sendsms( '9652316446', 'test message' );
 }
 
@@ -337,21 +335,7 @@ public function orderSuccess()
     $text="your Order placed succesfully with ". SITE_DOMAIN. ' order number: #'.$orderId.' for more info about your order please check your mail id ' .$email.' Thanks For Shopping With Us.';
         
         //send sms code start
-        $request = 'userid=alekhya&password=123456&sender=ALKHYA&mobileno='.$mobile.',9515074999&msg='.$text;
-
-        $ch = curl_init('http://www.smshub.co.in/websms/sendsms.aspx');
-
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-        curl_setopt($ch, CURLOPT_POST, true);
-
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
-
-        $resuponce = curl_exec($ch);
-
-        curl_close($ch);
-    
-       // return $resuponce;
+        sendsms($mobile, $text);
         //send sms code end
         if(SITE_MODE==1)
         {
@@ -426,19 +410,7 @@ public function orderVerification()
                 //send sms module section code start
                 $otp = mt_rand(0000,999999);
                 $text="Your order verification code $otp";
-                $request = 'userid=alekhya&password=123456&sender=ALKHYA&mobileno='.$mobile.'&msg='.$text;
-
-                $ch = curl_init('http://www.smshub.co.in/websms/sendsms.aspx');
-
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-                curl_setopt($ch, CURLOPT_POST, true);
-
-                curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
-
-                $resuponce = curl_exec($ch);
-
-                curl_close($ch);
+                sendsms($mobile, $text);
                 $otpInsert=[
                     'cart_session'=>$this->cartsession,
                     'otp_code'=>$otp,
